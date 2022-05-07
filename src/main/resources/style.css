@@ -1,0 +1,180 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Apr 6, 2022, 7:26:27 PM
+    Author     : shakir.gusaroff
+*/
+
+
+.root {
+    -fx-base: rgb(240, 240, 240);
+    -fx-background: rgb(240, 240, 240);
+    -fx-border-color: rgb(220, 220, 220);
+
+    /* make controls (buttons, thumb, etc.) slightly lighter */
+    -fx-color: derive(-fx-base, 10%);
+
+    /* text fields and table rows background */
+    -fx-control-inner-background: rgb(248, 248, 248);
+    /* version of -fx-control-inner-background for alternative rows */
+    -fx-control-inner-background-alt: derive(-fx-control-inner-background, -2.5%);
+
+    /* text colors depending on background's brightness */
+    -fx-light-text-color: rgb(220, 220, 220);
+    -fx-mid-text-color: rgb(100, 100, 100);
+    -fx-dark-text-color: rgb(20, 20, 20);
+
+    /* A bright blue for highlighting/accenting objects.  For example: selected
+     * text; selected items in menus, lists, trees, and tables; progress bars */
+    -fx-accent: rgb(0, 80, 100);
+
+    /* color of non-focused yet selected elements */
+    -fx-selection-bar-non-focused: rgb(50, 50, 50);
+
+    -fx-font-family: "Roboto"; /* "Segoe UI Semibold", "Roboto", "Monospaced" */
+    -fx-font-size: 1em;
+
+    -primary-border-color: rgb(220, 220, 220);
+}
+
+
+
+.button{
+    -fx-text-fill: rgb(49, 89, 23);
+    -fx-border-color: rgb(49, 89, 23);
+    -fx-border-radius: 3;
+    -fx-font-size: 12pt;
+    -fx-padding: 3 6 6 6;
+}
+/*
+.text-area{
+    -fx-font-size: 14;
+}
+*/
+/*
+.text-area{
+   -fx-font-family: "Quicksand";
+   -fx-font-size: 18;
+   -fx-padding: 1,1,1,1;
+   -fx-border-color: grey;
+   -fx-border-width: 1;
+   -fx-border-radius: 1;
+   -fx-border: gone;
+   -fx-background-color: transparent;
+   -fx-text-fill: grey;
+}
+*/
+/* Fix derived prompt color for text fields */
+.text-input {
+    -fx-prompt-text-fill: derive(-fx-control-inner-background, -50%);
+}
+
+/* Keep prompt invisible when focused (above color fix overrides it) */
+.text-input:focused {
+    -fx-prompt-text-fill: transparent;
+}
+
+/* Fix scroll bar buttons arrows colors */
+.scroll-bar > .increment-button > .increment-arrow,
+.scroll-bar > .decrement-button > .decrement-arrow {
+    -fx-background-color: -fx-mark-highlight-color, rgb(220, 220, 220);
+}
+
+.scroll-bar > .increment-button:hover > .increment-arrow,
+.scroll-bar > .decrement-button:hover > .decrement-arrow {
+    -fx-background-color: -fx-mark-highlight-color, rgb(240, 240, 240);
+}
+
+.scroll-bar > .increment-button:pressed > .increment-arrow,
+.scroll-bar > .decrement-button:pressed > .decrement-arrow {
+    -fx-background-color: -fx-mark-highlight-color, rgb(255, 255, 255);
+}
+
+.text-field {
+    -fx-font-size: 10pt;
+}
+
+.combo-box {
+    -fx-font-size: 10pt;
+}
+
+/* ScrollPane style. */
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+/* TabPane style. */
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0;
+}
+
+.tab-pane
+{
+    -fx-tab-min-width:88px;
+}
+
+.tab-pane .tab
+{
+    -fx-background-color: gray;
+    -fx-background-insets: 0 1 0 1,0,0;
+}
+
+.tab-pane .tab:selected
+{
+    -fx-background-color: green;
+}
+
+
+.tab .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial Rounded MT Bold";
+}
+
+.tab:selected .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: white;    
+
+}
+
+.tab-pane:focused .tab:selected .focus-indicator {
+    -fx-border-width: 0 ;
+    -fx-border-color: transparent;
+    -fx-border-insets: 0;
+    -fx-border-radius: 0;
+}
+/* TitledPane style. */
+.titled-pane {
+    -fx-border-width: 1;
+    -fx-border-color: -primary-border-color;
+  }
+
+.titled-pane > .content {
+    -fx-border-width: 1;
+}
+
+.titled-pane .title .arrow-button {
+    visibility: false;
+}
+
+.titled-pane > .title {
+   /* -fx-background-color: -primary-border-color;*/
+    -fx-background-insets: 0;
+    -fx-background-radius: 0 0 0 0;
+    -fx-padding: 0.2em 0.2em 0.2em 0.2em;
+    
+}
+
+.titled-pane > .title .text {
+    -fx-font-size: 14pt;
+ 
+
+}
